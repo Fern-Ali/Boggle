@@ -1,0 +1,88 @@
+﻿{% extends 'base.html' %}
+{% block title %} BOGGLE {% endblock %}
+{% block dropdown_link_1 %}https://fern-ali.github.io/AJAXGiphyParty/{% endblock %}
+{% block dropdown_link_2 %}https://fern-ali.github.io/MemoryGame/{% endblock %}
+{% block dropdown_link_3 %}https://fern-ali.github.io/connectFourGame/{% endblock %}
+{% block dropdown_desc_1 %} Giphy Gif Generator {% endblock %}
+{% block dropdown_desc_2 %} Memory Game {% endblock %}
+{% block dropdown_desc_3 %} Connect Four {% endblock %}
+{% block label %}
+<ul>
+
+    <li class="rules">Each letter after the first must be a horizontal, vertical, or diagonal neighbor of the one before it.</li>
+    <li class="rules">No individual letter cube may be used more than once in a word.</li>
+    <li class="rules">No capitalized or hyphenated words are allowed.</li>
+
+</ul>
+{% endblock %}
+
+{% block add_home_class_to_container %} fix_margin {% endblock %}
+
+{% block tablehead %}
+{% for x in board[0]%}
+
+
+
+<td class="mytopcells ">{{ x }} </td>
+
+
+{% endfor%}
+
+
+
+{% endblock %}
+
+{% block tablecontent %}
+
+{% for x in board[1]%}
+
+<td class="test ">{{ x }}</td>
+
+
+{% endfor%}
+<tr>
+    {% for x in board[2]%}
+
+    <td class="test ">{{ x }}</td>
+
+
+    {% endfor%}
+</tr>
+
+
+<tr>
+    {% for x in board[3]%}
+
+    <td class="test ">{{ x }}</td>
+
+
+    {% endfor%}
+
+</tr>
+
+
+<tr>
+    {% for x in board[4]%}
+
+    <td class="test shadow">{{ x }}</td>
+
+
+    {% endfor%}
+
+</tr>
+
+
+{% endblock %}
+
+{% block buttontxt %}New Game{% endblock %}
+
+{% block include_submit%}{% endblock %}
+
+{% block point_tracker %}<div class="row justify-content-center point_tracker_hidden"> <p id="point_tracker"></p> </div>{% endblock %}
+
+{% block navlink2 %}https://wordfinder.yourdictionary.com/blog/boggle-rules-made-easy-scoring-tips/{% endblock %}
+{% block navlinktext2 %}Boggle Rules{% endblock %}
+
+{% block navlink3 %}https://github.com/Fern-Ali/{% endblock %}
+
+{% block navlinktext3 %}My Github{% endblock %}

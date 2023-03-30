@@ -1,0 +1,74 @@
+﻿{% extends 'board.html' %}
+{% block title %} BOGGLE {% endblock %}
+
+{% block label %}
+{% endblock %}
+
+
+{% block tablehead %}
+{% for x in board[0]%}
+
+
+
+<td class="mytopcells ">{{ x }} </td>
+
+
+{% endfor%}
+
+
+
+{% endblock %}
+
+{% block tablecontent %}
+
+{% for x in board[1]%}
+
+<td class="test ">{{ x }}</td>
+
+
+{% endfor%}
+<tr>
+    {% for x in board[2]%}
+
+    <td class="test ">{{ x }}</td>
+
+
+    {% endfor%}
+</tr>
+
+
+<tr>
+    {% for x in board[3]%}
+
+    <td class="test ">{{ x }}</td>
+
+
+    {% endfor%}
+
+</tr>
+
+
+<tr>
+    {% for x in board[4]%}
+
+    <td class="test shadow">{{ x }}</td>
+
+
+    {% endfor%}
+
+</tr>
+
+
+{% endblock %}
+
+{% block buttontxt %}Make A Guess{% endblock %}
+{% block buttonid %}guess{% endblock %}
+{% block buttononclick %}"return false"{% endblock %}
+
+{% block include_submit%}
+<input type="text" class="form-control shape shadow placeholder" id="guess-form" name="word" value=""  placeholder=""> <br />{% endblock %}
+
+
+{% block form_action %}<form method="POST">{% endblock %}
+{% block point_tracker %}<div class="row justify-content-center point_tracker"> <p id="point_tracker" ></p> </div>{% endblock %}
+    
