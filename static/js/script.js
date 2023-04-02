@@ -123,7 +123,7 @@ function endGame() {
 }
 function countDown() {
     timer = timer - 1;
-    h2 = $("#h2")
+    h2 = $("#time_header")
     h2.text(`Time left: ${timer} seconds.`)
     if (timer == 0) {
         clearInterval(counter);

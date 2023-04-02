@@ -46,7 +46,7 @@ def index_game():
     flash(f"You have started a new BOGGLE game!", 'success')
     session[OUR_BOARD] = session[OUR_BOARD]
     board_length = len(session[OUR_BOARD])
-    words = Boggle.read_dict(Boggle, "words.txt")
+    #words = Boggle.read_dict(Boggle, "words.txt")
 
     word = request.args.get('word')
     

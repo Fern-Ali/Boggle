@@ -1,6 +1,8 @@
 ﻿{% extends 'board.html' %}
 {% block title %} BOGGLE {% endblock %}
 
+{% block h2 %}time_header{% endblock %}
+
 {% block label %}
 {% endblock %}
 
@@ -66,9 +68,10 @@
 {% block buttononclick %}"return false"{% endblock %}
 
 {% block include_submit%}
-<input type="text" class="form-control shape shadow placeholder" id="guess-form" name="word" value=""  placeholder=""> <br />{% endblock %}
+<input type="text" class="form-control shape shadow placeholder" id="guess-form" name="word" value="" placeholder="">
+<br />{% endblock %}
 
 
-{% block form_action %}<form method="POST">{% endblock %}
-{% block point_tracker %}<div class="row justify-content-center point_tracker"> <p id="point_tracker" ></p> </div>{% endblock %}
-    
+{% block form_action %}<form method="POST">
+    {% endblock %}
+    {% block point_tracker %}<div class="row justify-content-center point_tracker"> <p id="point_tracker"></p> </div>{% endblock %}
