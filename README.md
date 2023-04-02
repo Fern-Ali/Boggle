@@ -2,7 +2,7 @@
 	
 - You'll need requirements.txt (Flask), deploy via local host.
 
-      > pip pip install -r requirements.txt
+      > pip install -r requirements.txt
 
 - Obj oriented front-end with Javascript, CSS, HTML
 	> Front-end logic to check if guess is valid can be found in OOscript.js -- 
